@@ -1,6 +1,6 @@
 #!/bin/bash
 #wget https://github.com/${GitUser}/
-GitUser="scriptadamcrew"
+GitUser="imam022"
 # Color Validation
 Lred='\e[1;91m'
 Lgreen='\e[92m'
@@ -21,9 +21,9 @@ echo ''
 echo "                                                              "
 echo -e "$Lyellow                  ⚡ PREMIUM AUTOSCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By Nakata143"$NC
+echo -e "$Lyellow                  Autoscript By RemakeV1"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @Nakata143"$NC
+echo -e "$Lyellow                       @RemakeV1"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Tunggu 5 Saat!"$NC
@@ -48,7 +48,7 @@ clear
 # Valid Script
 VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
-    Exp1=$(curl https://raw.githubusercontent.com/imam022/titid/main/ip | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl https://raw.githubusercontent.com/imam022/titid/main/ip | grep $MYIP | awk '{print $3}')
     if [[ $today < $Exp1 ]]; then
         echo -e "\e[32mTahniah! Anda Dibenarkan Menggunakan Autoscript Ini..\e[0m"
         sleep 5
@@ -58,20 +58,7 @@ VALIDITY() {
         exit 0
     fi
 }
-# Valid Script
-VALIDITY() {
-    today=$(date -d "0 days" +"%Y-%m-%d")
-    Exp1=$(curl https://raw.githubusercontent.com/imam022/titid/main/ip | grep $MYIP | awk '{print $4}')
-    if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mTahniah! Anda Dibenarkan Menggunakan Autoscript Ini..\e[0m"
-        sleep 5
-    else
-        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
-        echo -e "\e[31mPlease renew your ipvps first\e[0m"
-        exit 0
-    fi
-}
-IZIN=$(curl https://raw.githubusercontent.com/imam022/titid/main/ip | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl https://raw.githubusercontent.com/imam022/titid/main/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
     echo -e "\e[32mPermission Accepted...\e[0m"
     VALIDITY
@@ -130,12 +117,12 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 fi
@@ -146,32 +133,32 @@ sleep 2
 #install ssh ovpn
 echo -e "\e[0;32mINSTALLING SSH & OVPN...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
 clear
 #install Xray
 echo -e "\e[0;32mINSTALLING XRAY CORE...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/ins-xray.sh && chmod +x ins-xray.sh && screen -S ins-xray ./ins-xray.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/ins-xray.sh && chmod +x ins-xray.sh && screen -S ins-xray ./ins-xray.sh
 echo -e "\e[0;32mDONE INSTALLING XRAY CORE\e[0m"
 clear
 #install ohp-server
 echo -e "\e[0;32mINSTALLING OHP PORT...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 echo -e "\e[0;32mDONE INSTALLING OHP PORT\e[0m"
 clear
 #install websocket
 echo -e "\e[0;32mINSTALLING WEBSOCKET PORT...\e[0m"
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 echo -e "\e[0;32mDONE INSTALLING WEBSOCKET PORT\e[0m"
 clear
 #install SET-BR
 echo -e "\e[0;32mINSTALLING SET-BR...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/multiport/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/${GitUser}/remakev1/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
 # set time GMT +8
@@ -183,9 +170,9 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/multiport/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/remakev1/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/multiport/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/remakev1/main/vps.conf"
 /etc/init.d/nginx restart
 #finish
 rm -f /root/ssh-vpn.sh
@@ -212,7 +199,7 @@ clear
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo -e "\e[1;32m══════════════════Autoscript Nakata143══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════Autoscript RemakeV1══════════════════\e[0m" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
@@ -268,13 +255,13 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo -e "\e[1;32m══════════════════Autoscript By Nakata143══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════Autoscript By RemakeV1══════════════════\e[0m" | tee -a log-install.txt
 sleep 7
 clear
 echo ""
 echo -e "    \e[1;32m.------------------------------------------.\e[0m"
 echo -e "    \e[1;32m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
-echo -e "    \e[1;32m|         Premium By Nakata143             |\e[0m"
+echo -e "    \e[1;32m|         Premium By RemakeV1             |\e[0m"
 echo -e "    \e[1;32m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;32mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
