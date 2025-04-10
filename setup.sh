@@ -165,6 +165,7 @@ clear
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 # install clouflare JQ
 apt install jq curl -y
+apt install python -y
 # install webserver
 apt -y install nginx
 cd
